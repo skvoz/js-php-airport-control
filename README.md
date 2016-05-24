@@ -49,7 +49,12 @@ Work
 * RestController
     * data
     * send
-    
+Trouble
+=======
+* not using "coding by contract"
+* param "key airport" not exist in http://www.opodo.de response, as "key airport" using "geoNodeId"
+
+
 Symfony Standard Edition
 ========================
 
