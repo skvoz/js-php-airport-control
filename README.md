@@ -1,3 +1,55 @@
+Test Task: Departure Airport Control
+=====================
+Write your own control for the selection of departure airports. When typing into the input field, a request should be triggered to the backend application. When the user selects a destination, the selected value should be written into the text field and another request should be triggered to the backend. This call should return an array with key airport and the selected airport code (iata code) as value.
+
+You can find the a live example on www.opodo.de. Also you find an attached gif that shows the business logic
+
+Requirements
+=============
+## Frontend
+    * Try to use plain JavaScript for the most part
+    * You may use jQuery for Ajax Request and DOM selection
+    * If you want to divide your JS into modules, feel free to use requirejs
+    * Do not query the API directly from the JS app. Use your symfony backend as a proxy for the request so your JS application actually requests a route defined in symfony
+    * You do not have to replicate the exact HTML / CSS. It can look ugly. :)
+## Backend
+    * Usage of symfony2 is mandatory
+    * Write a backend service to query the external API. Please use the "coding by contract" principle with an interface to make the API easily exchangable with other services
+
+## This is the API to use:
+> http://www.opodo.de/travel/service/geo/autocomplete;searchWord=cgn;departureOrArrival=DEPARTURE;addSearchByCountry=true;addSearchByRegion=true;product=FLIGHT
+
+searchWord Parameter is the one that should contain the typed word
+
+Work
+======
+
+## oop design
+
+###js class
+
+* Control
+    * id: control
+    * events: type, click
+    * function: init, set
+* Http
+    * method : request
+* ListItems
+    * id: listItems
+    * function:  showOrCreate, hidden, setData
+* Items
+    * id: item
+    * events: click
+    * function: render, bindEvents
+    
+### php class
+
+* ClientController
+    * index
+* RestController
+    * data
+    * send
+    
 Symfony Standard Edition
 ========================
 

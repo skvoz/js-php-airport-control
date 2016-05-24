@@ -6,10 +6,12 @@
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="{{ asset('assets/js/dropdown.js') }}"></script>
-        <script src="{{ asset('assets/js/http.js') }}"></script>
-        <script src="{{ asset('assets/js/core.js') }}"></script>
-        <script src="{{ asset('assets/js/script.js') }}"></script>
+        <script data-main="{{ asset('assets/js/config.js')}}" src="{{ asset('assets/js/require.js') }}"></script>
+        {#<script src="{{ asset('assets/js/modules/control.js') }}"></script>#}
+        {#<script src="{{ asset('assets/js/dropdown.js') }}"></script>#}
+        {#<script src="{{ asset('assets/js/http.js') }}"></script>#}
+        {#<script src="{{ asset('assets/js/core.js') }}"></script>#}
+        {#<script src="{{ asset('assets/js/script.js') }}"></script>#}
     </head>
     <body>
         {% block body %}{% endblock %}

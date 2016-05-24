@@ -18,6 +18,6 @@ class ClientController extends Controller
         return $this->render('client/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
-   
+
     }
 }
